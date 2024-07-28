@@ -1,6 +1,22 @@
-import "@/styles/globals.css";
-import type { AppProps } from "next/app";
+import { ChakraProvider } from "@chakra-ui/react";
+import theme from "../theme";
+import { Inter } from "next/font/google";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
+const inter = Inter({ subsets: ["latin"] });
+
+const App = ({ Component, pageProps }) => {
+  return (
+    <ChakraProvider theme={theme}>
+      <>
+        <style jsx global>{`
+          :root {
+            --font-inter: ${inter.style.fontFamily};
+          }
+        `}</style>
+        <Component {...pageProps} />
+      </>
+    </ChakraProvider>
+  );
+};
+
+export default App;
