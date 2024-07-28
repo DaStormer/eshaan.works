@@ -30,7 +30,7 @@ export const SocialStack = () => {
           Instagram
         </Button>
       </Link>
-      <Link isExternal href="https://discord.com/user/373893905243963394">
+      <Link isExternal href="https://discord.com/users/373893905243963394">
         <Button colorScheme="purple" variant="outline" leftIcon={<FaDiscord />}>
           Discord
         </Button>
